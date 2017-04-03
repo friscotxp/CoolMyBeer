@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		325E18C71E91E7C000245F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E18C61E91E7C000245F66 /* AppDelegate.swift */; };
+		325E18C91E91E7C000245F66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E18C81E91E7C000245F66 /* ViewController.swift */; };
+		325E18CC1E91E7C000245F66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325E18CA1E91E7C000245F66 /* Main.storyboard */; };
+		325E18CE1E91E7C000245F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325E18CD1E91E7C000245F66 /* Assets.xcassets */; };
+		325E18D11E91E7C000245F66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325E18CF1E91E7C000245F66 /* LaunchScreen.storyboard */; };
+		325E18DC1E91E7C000245F66 /* CoolMyBeerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E18DB1E91E7C000245F66 /* CoolMyBeerTests.swift */; };
+		325E18E71E91E7C000245F66 /* CoolMyBeerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E18E61E91E7C000245F66 /* CoolMyBeerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		325E18D81E91E7C000245F66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 325E18BB1E91E7C000245F66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 325E18C21E91E7C000245F66;
+			remoteInfo = CoolMyBeer;
+		};
+		325E18E31E91E7C000245F66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 325E18BB1E91E7C000245F66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 325E18C21E91E7C000245F66;
+			remoteInfo = CoolMyBeer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		325E18C31E91E7C000245F66 /* CoolMyBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolMyBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		325E18C61E91E7C000245F66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		325E18C81E91E7C000245F66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		325E18CB1E91E7C000245F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		325E18CD1E91E7C000245F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		325E18D01E91E7C000245F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		325E18D21E91E7C000245F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		325E18D71E91E7C000245F66 /* CoolMyBeerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolMyBeerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		325E18DB1E91E7C000245F66 /* CoolMyBeerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolMyBeerTests.swift; sourceTree = "<group>"; };
+		325E18DD1E91E7C000245F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		325E18E21E91E7C000245F66 /* CoolMyBeerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolMyBeerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		325E18E61E91E7C000245F66 /* CoolMyBeerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolMyBeerUITests.swift; sourceTree = "<group>"; };
+		325E18E81E91E7C000245F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		325E18C01E91E7C000245F66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325E18D41E91E7C000245F66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325E18DF1E91E7C000245F66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		325E18BA1E91E7C000245F66 = {
+			isa = PBXGroup;
+			children = (
+				325E18C51E91E7C000245F66 /* CoolMyBeer */,
+				325E18DA1E91E7C000245F66 /* CoolMyBeerTests */,
+				325E18E51E91E7C000245F66 /* CoolMyBeerUITests */,
+				325E18C41E91E7C000245F66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		325E18C41E91E7C000245F66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				325E18C31E91E7C000245F66 /* CoolMyBeer.app */,
+				325E18D71E91E7C000245F66 /* CoolMyBeerTests.xctest */,
+				325E18E21E91E7C000245F66 /* CoolMyBeerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		325E18C51E91E7C000245F66 /* CoolMyBeer */ = {
+			isa = PBXGroup;
+			children = (
+				325E18C61E91E7C000245F66 /* AppDelegate.swift */,
+				325E18C81E91E7C000245F66 /* ViewController.swift */,
+				325E18CA1E91E7C000245F66 /* Main.storyboard */,
+				325E18CD1E91E7C000245F66 /* Assets.xcassets */,
+				325E18CF1E91E7C000245F66 /* LaunchScreen.storyboard */,
+				325E18D21E91E7C000245F66 /* Info.plist */,
+			);
+			path = CoolMyBeer;
+			sourceTree = "<group>";
+		};
+		325E18DA1E91E7C000245F66 /* CoolMyBeerTests */ = {
+			isa = PBXGroup;
+			children = (
+				325E18DB1E91E7C000245F66 /* CoolMyBeerTests.swift */,
+				325E18DD1E91E7C000245F66 /* Info.plist */,
+			);
+			path = CoolMyBeerTests;
+			sourceTree = "<group>";
+		};
+		325E18E51E91E7C000245F66 /* CoolMyBeerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				325E18E61E91E7C000245F66 /* CoolMyBeerUITests.swift */,
+				325E18E81E91E7C000245F66 /* Info.plist */,
+			);
+			path = CoolMyBeerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		325E18C21E91E7C000245F66 /* CoolMyBeer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 325E18EB1E91E7C000245F66 /* Build configuration list for PBXNativeTarget "CoolMyBeer" */;
+			buildPhases = (
+				325E18BF1E91E7C000245F66 /* Sources */,
+				325E18C01E91E7C000245F66 /* Frameworks */,
+				325E18C11E91E7C000245F66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoolMyBeer;
+			productName = CoolMyBeer;
+			productReference = 325E18C31E91E7C000245F66 /* CoolMyBeer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		325E18D61E91E7C000245F66 /* CoolMyBeerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 325E18EE1E91E7C000245F66 /* Build configuration list for PBXNativeTarget "CoolMyBeerTests" */;
+			buildPhases = (
+				325E18D31E91E7C000245F66 /* Sources */,
+				325E18D41E91E7C000245F66 /* Frameworks */,
+				325E18D51E91E7C000245F66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				325E18D91E91E7C000245F66 /* PBXTargetDependency */,
+			);
+			name = CoolMyBeerTests;
+			productName = CoolMyBeerTests;
+			productReference = 325E18D71E91E7C000245F66 /* CoolMyBeerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		325E18E11E91E7C000245F66 /* CoolMyBeerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 325E18F11E91E7C000245F66 /* Build configuration list for PBXNativeTarget "CoolMyBeerUITests" */;
+			buildPhases = (
+				325E18DE1E91E7C000245F66 /* Sources */,
+				325E18DF1E91E7C000245F66 /* Frameworks */,
+				325E18E01E91E7C000245F66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				325E18E41E91E7C000245F66 /* PBXTargetDependency */,
+			);
+			name = CoolMyBeerUITests;
+			productName = CoolMyBeerUITests;
+			productReference = 325E18E21E91E7C000245F66 /* CoolMyBeerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		325E18BB1E91E7C000245F66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Francisco Palma";
+				TargetAttributes = {
+					325E18C21E91E7C000245F66 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = J468PK3CF8;
+						ProvisioningStyle = Automatic;
+					};
+					325E18D61E91E7C000245F66 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = J468PK3CF8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 325E18C21E91E7C000245F66;
+					};
+					325E18E11E91E7C000245F66 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = J468PK3CF8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 325E18C21E91E7C000245F66;
+					};
+				};
+			};
+			buildConfigurationList = 325E18BE1E91E7C000245F66 /* Build configuration list for PBXProject "CoolMyBeer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 325E18BA1E91E7C000245F66;
+			productRefGroup = 325E18C41E91E7C000245F66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				325E18C21E91E7C000245F66 /* CoolMyBeer */,
+				325E18D61E91E7C000245F66 /* CoolMyBeerTests */,
+				325E18E11E91E7C000245F66 /* CoolMyBeerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		325E18C11E91E7C000245F66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325E18D11E91E7C000245F66 /* LaunchScreen.storyboard in Resources */,
+				325E18CE1E91E7C000245F66 /* Assets.xcassets in Resources */,
+				325E18CC1E91E7C000245F66 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325E18D51E91E7C000245F66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325E18E01E91E7C000245F66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		325E18BF1E91E7C000245F66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325E18C91E91E7C000245F66 /* ViewController.swift in Sources */,
+				325E18C71E91E7C000245F66 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325E18D31E91E7C000245F66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325E18DC1E91E7C000245F66 /* CoolMyBeerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325E18DE1E91E7C000245F66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325E18E71E91E7C000245F66 /* CoolMyBeerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		325E18D91E91E7C000245F66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 325E18C21E91E7C000245F66 /* CoolMyBeer */;
+			targetProxy = 325E18D81E91E7C000245F66 /* PBXContainerItemProxy */;
+		};
+		325E18E41E91E7C000245F66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 325E18C21E91E7C000245F66 /* CoolMyBeer */;
+			targetProxy = 325E18E31E91E7C000245F66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		325E18CA1E91E7C000245F66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				325E18CB1E91E7C000245F66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		325E18CF1E91E7C000245F66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				325E18D01E91E7C000245F66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		325E18E91E91E7C000245F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		325E18EA1E91E7C000245F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		325E18EC1E91E7C000245F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J468PK3CF8;
+				INFOPLIST_FILE = CoolMyBeer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sphera.CoolMyBeer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		325E18ED1E91E7C000245F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J468PK3CF8;
+				INFOPLIST_FILE = CoolMyBeer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sphera.CoolMyBeer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		325E18EF1E91E7C000245F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = J468PK3CF8;
+				INFOPLIST_FILE = CoolMyBeerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sphera.CoolMyBeerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoolMyBeer.app/CoolMyBeer";
+			};
+			name = Debug;
+		};
+		325E18F01E91E7C000245F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = J468PK3CF8;
+				INFOPLIST_FILE = CoolMyBeerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sphera.CoolMyBeerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoolMyBeer.app/CoolMyBeer";
+			};
+			name = Release;
+		};
+		325E18F21E91E7C000245F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = J468PK3CF8;
+				INFOPLIST_FILE = CoolMyBeerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sphera.CoolMyBeerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CoolMyBeer;
+			};
+			name = Debug;
+		};
+		325E18F31E91E7C000245F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = J468PK3CF8;
+				INFOPLIST_FILE = CoolMyBeerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sphera.CoolMyBeerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CoolMyBeer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		325E18BE1E91E7C000245F66 /* Build configuration list for PBXProject "CoolMyBeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325E18E91E91E7C000245F66 /* Debug */,
+				325E18EA1E91E7C000245F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		325E18EB1E91E7C000245F66 /* Build configuration list for PBXNativeTarget "CoolMyBeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325E18EC1E91E7C000245F66 /* Debug */,
+				325E18ED1E91E7C000245F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		325E18EE1E91E7C000245F66 /* Build configuration list for PBXNativeTarget "CoolMyBeerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325E18EF1E91E7C000245F66 /* Debug */,
+				325E18F01E91E7C000245F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		325E18F11E91E7C000245F66 /* Build configuration list for PBXNativeTarget "CoolMyBeerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325E18F21E91E7C000245F66 /* Debug */,
+				325E18F31E91E7C000245F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 325E18BB1E91E7C000245F66 /* Project object */;
+}
