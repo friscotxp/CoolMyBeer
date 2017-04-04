@@ -14,6 +14,7 @@
 		325E18D11E91E7C000245F66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325E18CF1E91E7C000245F66 /* LaunchScreen.storyboard */; };
 		325E18DC1E91E7C000245F66 /* CoolMyBeerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E18DB1E91E7C000245F66 /* CoolMyBeerTests.swift */; };
 		325E18E71E91E7C000245F66 /* CoolMyBeerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E18E61E91E7C000245F66 /* CoolMyBeerUITests.swift */; };
+		325E18F51E93BDC800245F66 /* BOMB_SIREN.wav in Resources */ = {isa = PBXBuildFile; fileRef = 325E18F41E93BDC800245F66 /* BOMB_SIREN.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		325E18E21E91E7C000245F66 /* CoolMyBeerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolMyBeerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		325E18E61E91E7C000245F66 /* CoolMyBeerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolMyBeerUITests.swift; sourceTree = "<group>"; };
 		325E18E81E91E7C000245F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		325E18F41E93BDC800245F66 /* BOMB_SIREN.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = BOMB_SIREN.wav; path = CoolMyBeer/BOMB_SIREN.wav; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		325E18C51E91E7C000245F66 /* CoolMyBeer */ = {
 			isa = PBXGroup;
 			children = (
+				325E18F41E93BDC800245F66 /* BOMB_SIREN.wav */,
 				325E18C61E91E7C000245F66 /* AppDelegate.swift */,
 				325E18C81E91E7C000245F66 /* ViewController.swift */,
 				325E18CA1E91E7C000245F66 /* Main.storyboard */,
@@ -237,6 +240,7 @@
 			files = (
 				325E18D11E91E7C000245F66 /* LaunchScreen.storyboard in Resources */,
 				325E18CE1E91E7C000245F66 /* Assets.xcassets in Resources */,
+				325E18F51E93BDC800245F66 /* BOMB_SIREN.wav in Resources */,
 				325E18CC1E91E7C000245F66 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +518,7 @@
 				325E18ED1E91E7C000245F66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		325E18EE1E91E7C000245F66 /* Build configuration list for PBXNativeTarget "CoolMyBeerTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +527,7 @@
 				325E18F01E91E7C000245F66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		325E18F11E91E7C000245F66 /* Build configuration list for PBXNativeTarget "CoolMyBeerUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +536,7 @@
 				325E18F31E91E7C000245F66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

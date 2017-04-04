@@ -7,21 +7,23 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var tituloPrincipal: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     var resumeTapped = false;
+    var player: AVAudioPlayer?
     
-    var seconds = 2700 //This variable will hold a starting value of seconds. It could be any amount above 0.
+    var seconds = 10 //2700 This variable will hold a starting value of seconds. It could be any amount above 0.
     var timer = Timer();
     var isTimerRunning = false; //This will be used to make sure only one timer is created at a time.
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        tituloPrincipal.text = "Colocar la cerveza en el congelador!";
+        tituloPrincipal.text = "Coloca la cerveza en el congelador!";
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +46,8 @@ class ViewController: UIViewController {
     
     func updateTimer() {
         if seconds < 1 {
-            timer.invalidate()
+            playSound();
+            timer.invalidate();
             //Send alert to indicate "time's up!"
         } else {
             seconds -= 1
@@ -52,10 +55,28 @@ class ViewController: UIViewController {
         }
     }
     
+    func playSound() {
+        print("BEEEEEEP");
+        let url = Bundle.main.url(forResource: "BOMB_SIREN", withExtension: "wav")!
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            player.prepareToPlay();
+            player.play();
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
     @IBOutlet weak var actionEnfriar: UIButton!
     @IBAction func actionEnviar(_ sender: UIButton) {
         if isTimerRunning == false {
-            runTimer()
+            actionEnfriar.setTitle("Detener", for: .normal);
+            runTimer();
+        }else{
+            player?.stop();
+            seconds = 10;
+            actionEnfriar.setTitle("Enfriar", for: .normal);
         }
     }
 }
