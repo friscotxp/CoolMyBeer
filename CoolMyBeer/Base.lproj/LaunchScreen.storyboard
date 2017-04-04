@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E191a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,17 +18,29 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ICED_BEER_1x1.png" translatesAutoresizingMaskIntoConstraints="NO" id="VLg-Uv-z7Y">
-                                <rect key="frame" x="-213" y="-66.5" width="800" height="800"/>
+                                <rect key="frame" x="-27.5" y="70" width="375" height="428"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="428" id="Dch-aW-ukK"/>
+                                    <constraint firstAttribute="width" constant="375" id="nsg-25-ody"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cool My Beer!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlb-nS-itY">
+                                <rect key="frame" x="104" y="41" width="112.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99322992229999996" green="1" blue="0.2964318621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VLg-Uv-z7Y" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="L1g-RK-4D8"/>
-                            <constraint firstItem="VLg-Uv-z7Y" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="YdF-bV-fUC"/>
+                            <constraint firstItem="hlb-nS-itY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4rr-i2-5bh"/>
+                            <constraint firstItem="VLg-Uv-z7Y" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="B2g-Bj-sBa"/>
+                            <constraint firstItem="VLg-Uv-z7Y" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="V5M-MX-F3I"/>
+                            <constraint firstItem="VLg-Uv-z7Y" firstAttribute="top" secondItem="hlb-nS-itY" secondAttribute="bottom" constant="8" id="tIt-NU-wiq"/>
                         </constraints>
                     </view>
                 </viewController>

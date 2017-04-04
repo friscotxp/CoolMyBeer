@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E191a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7n-e3-tXV">
-                                <rect key="frame" x="146" y="306" width="82" height="55"/>
+                                <rect key="frame" x="119" y="256.5" width="82" height="55"/>
                                 <color key="backgroundColor" red="0.35715919730000001" green="0.79367560150000005" blue="0.2085959017" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="Eja-aK-QLp"/>
@@ -35,49 +35,75 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coloca la cerveza en el congelador!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUo-IW-yKK">
-                                <rect key="frame" x="51.5" y="137" width="271.5" height="21"/>
+                                <rect key="frame" x="24.5" y="137" width="271.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aSa-KW-32k">
+                                <rect key="frame" x="79" y="396" width="179" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:45:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNu-Ct-mcc">
-                                <rect key="frame" x="151.5" y="235" width="71.5" height="21"/>
+                                <rect key="frame" x="125" y="196.5" width="71.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BEER.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Yy-cc-MIn">
-                                <rect key="frame" x="54.5" y="437" width="266" height="198"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="sdH-iF-8sj">
+                                <rect key="frame" x="69" y="396" width="183" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="266" id="Bly-z4-JcI"/>
-                                    <constraint firstAttribute="height" constant="198" id="NGW-jj-cE4"/>
+                                    <constraint firstAttribute="height" constant="30" id="Nlv-wL-106"/>
+                                    <constraint firstAttribute="width" constant="179" id="qMk-KJ-hBQ"/>
                                 </constraints>
-                            </imageView>
+                                <connections>
+                                    <action selector="barraEnfriar:" destination="BYZ-38-t0r" eventType="valueChanged" id="SvV-5Q-k9T"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Más" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEz-Hm-waf">
+                                <rect key="frame" x="218" y="434" width="32" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fría" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7L-ZK-ISV">
+                                <rect key="frame" x="146" y="434" width="29" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lQ-TZ-s5Z">
+                                <rect key="frame" x="71" y="434" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99322992233612351" green="1" blue="0.29643186207456873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pUo-IW-yKK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="117" id="0P8-hb-jNT"/>
                             <constraint firstItem="mNu-Ct-mcc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Po-3Y-aJQ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Yy-cc-MIn" secondAttribute="bottom" constant="32" id="Cyb-pO-S9d"/>
-                            <constraint firstItem="0Yy-cc-MIn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hv4-MR-eli"/>
+                            <constraint firstItem="sdH-iF-8sj" firstAttribute="top" secondItem="N7n-e3-tXV" secondAttribute="bottom" constant="84.5" id="9hB-xL-hTw"/>
                             <constraint firstItem="pUo-IW-yKK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hyA-KL-8dK"/>
                             <constraint firstItem="N7n-e3-tXV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kyK-Xu-Yds"/>
-                            <constraint firstItem="mNu-Ct-mcc" firstAttribute="top" secondItem="pUo-IW-yKK" secondAttribute="bottom" constant="77" id="oQ7-3R-yMo"/>
+                            <constraint firstItem="mNu-Ct-mcc" firstAttribute="top" secondItem="pUo-IW-yKK" secondAttribute="bottom" constant="39" id="mc0-OV-k80"/>
                             <constraint firstItem="N7n-e3-tXV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tIw-BD-fms"/>
+                            <constraint firstItem="sdH-iF-8sj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vkm-8i-Tzu"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="actionEnfriar" destination="N7n-e3-tXV" id="q4m-Rn-ft4"/>
+                        <outlet property="barraEnfriar" destination="vkm-8i-Tzu" id="kAr-1C-JFk"/>
                         <outlet property="timerLabel" destination="mNu-Ct-mcc" id="Uff-ag-vhW"/>
                         <outlet property="tituloPrincipal" destination="pUo-IW-yKK" id="yyo-eK-9zw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="135" y="138.38028169014083"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="BEER.png" width="800" height="800"/>
-    </resources>
 </document>

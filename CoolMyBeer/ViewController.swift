@@ -13,10 +13,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tituloPrincipal: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var barraEnfriar: UISlider!
+    
     var resumeTapped = false;
     var player: AVAudioPlayer?
     var isRunning = false;
-    
+    var enfriar = Float(0);
     
     var seconds = 10 //2700 This variable will hold a starting value of seconds. It could be any amount above 0.
     var timer = Timer();
@@ -28,11 +30,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tituloPrincipal.text = "Coloca la cerveza en el congelador!";
-        setSeconds();
+        if (enfriar == 0.0){
+            enfriar = Float(1);
+        }else{
+            barraEnfriar.value = enfriar;
+        }
     }
     
-    func setSeconds(){
-        seconds = 10;
+    func setSegundos(_ sec:Int){
+        seconds = sec;
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,18 +97,36 @@ class ViewController: UIViewController {
     @IBOutlet weak var actionEnfriar: UIButton!
     @IBAction func actionEnviar(_ sender: UIButton) {
         if isRunning == false {
-            setSeconds();
             actionEnfriar.setTitle("Detener", for: .normal);
             isRunning = true;
             runTimer();
         }else{
             isRunning = false;
             playSound(play: false);
-            setSeconds();
             timer.invalidate();
             actionEnfriar.setTitle("Enfriar", for: .normal);
         }
         print("isRunnind: \(isRunning)")
+    }
+    
+    @IBAction func barraEnfriar(_ sender: UISlider) {
+        if (sender.value < 0.5){
+            enfriar = 0;
+            sender.value = 0;
+            setSegundos(1800);
+        }else
+            if (sender.value >= 0.5 && sender.value < 1.5){
+                enfriar = 1;
+                sender.value = 1;
+                setSegundos(2700);
+        }else
+                if (sender.value > 1.5){
+                    enfriar = 2;
+                    sender.value = 2;
+                    setSegundos(3600);
+        }
+        print(enfriar);
+        //enfriar = Float(sender.value);
     }
 }
 
