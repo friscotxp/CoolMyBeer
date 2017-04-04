@@ -1,33 +1,51 @@
 {
   "images" : [
     {
+      "size" : "20x20",
       "idiom" : "iphone",
-      "size" : "29x29",
+      "filename" : "BEER_40x40.png",
       "scale" : "2x"
     },
     {
+      "size" : "20x20",
       "idiom" : "iphone",
-      "size" : "29x29",
+      "filename" : "BEER_60x60 2.png",
       "scale" : "3x"
     },
     {
+      "size" : "29x29",
       "idiom" : "iphone",
-      "size" : "40x40",
+      "filename" : "BEER_58x58.png",
       "scale" : "2x"
     },
     {
+      "size" : "29x29",
       "idiom" : "iphone",
-      "size" : "40x40",
+      "filename" : "BEER_87x87.png",
       "scale" : "3x"
     },
     {
+      "size" : "40x40",
       "idiom" : "iphone",
-      "size" : "60x60",
+      "filename" : "BEER_80x80.png",
       "scale" : "2x"
     },
     {
+      "size" : "40x40",
       "idiom" : "iphone",
+      "filename" : "BEER_120x120.png",
+      "scale" : "3x"
+    },
+    {
       "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "BEER_120x121.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "BEER_180x180.png",
       "scale" : "3x"
     }
   ],

@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E191a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoolMyBeer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7n-e3-tXV">
+                                <rect key="frame" x="146" y="306" width="82" height="55"/>
+                                <color key="backgroundColor" red="0.35715919730000001" green="0.79367560150000005" blue="0.2085959017" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Eja-aK-QLp"/>
+                                    <constraint firstAttribute="width" constant="82" id="lZn-dp-Iwa"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.039765733839999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Enfriar"/>
+                                <connections>
+                                    <action selector="actionEnviar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9XB-eu-sOs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colocar la cerveza en el congelador!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUo-IW-yKK">
+                                <rect key="frame" x="48.5" y="137" width="277.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:45:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNu-Ct-mcc">
+                                <rect key="frame" x="151.5" y="235" width="71.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99322992233612351" green="1" blue="0.29643186207456873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pUo-IW-yKK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="117" id="0P8-hb-jNT"/>
+                            <constraint firstItem="mNu-Ct-mcc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Po-3Y-aJQ"/>
+                            <constraint firstItem="pUo-IW-yKK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hyA-KL-8dK"/>
+                            <constraint firstItem="N7n-e3-tXV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kyK-Xu-Yds"/>
+                            <constraint firstItem="mNu-Ct-mcc" firstAttribute="top" secondItem="pUo-IW-yKK" secondAttribute="bottom" constant="77" id="oQ7-3R-yMo"/>
+                            <constraint firstItem="N7n-e3-tXV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tIw-BD-fms"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="actionEnfriar" destination="N7n-e3-tXV" id="q4m-Rn-ft4"/>
+                        <outlet property="timerLabel" destination="mNu-Ct-mcc" id="Uff-ag-vhW"/>
+                        <outlet property="tituloPrincipal" destination="pUo-IW-yKK" id="yyo-eK-9zw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
