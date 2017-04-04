@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     var timer = Timer();
     var isTimerRunning = false; //This will be used to make sure only one timer is created at a time.
     
+    let audioSession = AVAudioSession.sharedInstance()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -64,6 +66,14 @@ class ViewController: UIViewController {
     
     func playSound(play: DarwinBoolean) {
         let url = Bundle.main.url(forResource: "BOMB_SIREN", withExtension: "wav")!
+        
+        do {
+            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord);
+            try audioSession.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker);
+        } catch {
+            print("Error: \(error)")
+        }
+        
         do {
             player = try AVAudioPlayer(contentsOf: url)
             if play.boolValue {
