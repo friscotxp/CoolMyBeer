@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     var resumeTapped = false;
     var player: AVAudioPlayer?
+    var isRunning = false;
+    
     
     var seconds = 10 //2700 This variable will hold a starting value of seconds. It could be any amount above 0.
     var timer = Timer();
@@ -24,6 +26,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tituloPrincipal.text = "Coloca la cerveza en el congelador!";
+        setSeconds();
+    }
+    
+    func setSeconds(){
+        seconds = 10;
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +53,7 @@ class ViewController: UIViewController {
     
     func updateTimer() {
         if seconds < 1 {
-            playSound();
+            if timer.isValid { playSound(play: true); }
             timer.invalidate();
             //Send alert to indicate "time's up!"
         } else {
@@ -55,14 +62,17 @@ class ViewController: UIViewController {
         }
     }
     
-    func playSound() {
-        print("BEEEEEEP");
+    func playSound(play: DarwinBoolean) {
         let url = Bundle.main.url(forResource: "BOMB_SIREN", withExtension: "wav")!
         do {
             player = try AVAudioPlayer(contentsOf: url)
-            guard let player = player else { return }
-            player.prepareToPlay();
-            player.play();
+            if play.boolValue {
+                guard let player = player else { return }
+                player.prepareToPlay();
+                player.play();
+            }else{
+                player?.stop();
+            }
         } catch let error {
             print(error.localizedDescription)
         }
@@ -70,14 +80,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var actionEnfriar: UIButton!
     @IBAction func actionEnviar(_ sender: UIButton) {
-        if isTimerRunning == false {
+        if isRunning == false {
+            setSeconds();
             actionEnfriar.setTitle("Detener", for: .normal);
+            isRunning = true;
             runTimer();
         }else{
-            player?.stop();
-            seconds = 10;
+            isRunning = false;
+            playSound(play: false);
+            setSeconds();
+            timer.invalidate();
             actionEnfriar.setTitle("Enfriar", for: .normal);
         }
+        print("isRunnind: \(isRunning)")
     }
 }
 

@@ -15,6 +15,7 @@
 		325E18DC1E91E7C000245F66 /* CoolMyBeerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E18DB1E91E7C000245F66 /* CoolMyBeerTests.swift */; };
 		325E18E71E91E7C000245F66 /* CoolMyBeerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E18E61E91E7C000245F66 /* CoolMyBeerUITests.swift */; };
 		325E18F51E93BDC800245F66 /* BOMB_SIREN.wav in Resources */ = {isa = PBXBuildFile; fileRef = 325E18F41E93BDC800245F66 /* BOMB_SIREN.wav */; };
+		325E18F71E93D27900245F66 /* ICED_BEER_1x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 325E18F61E93D27900245F66 /* ICED_BEER_1x1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		325E18E61E91E7C000245F66 /* CoolMyBeerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolMyBeerUITests.swift; sourceTree = "<group>"; };
 		325E18E81E91E7C000245F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		325E18F41E93BDC800245F66 /* BOMB_SIREN.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = BOMB_SIREN.wav; path = CoolMyBeer/BOMB_SIREN.wav; sourceTree = SOURCE_ROOT; };
+		325E18F61E93D27900245F66 /* ICED_BEER_1x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ICED_BEER_1x1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				325E18F41E93BDC800245F66 /* BOMB_SIREN.wav */,
+				325E18F61E93D27900245F66 /* ICED_BEER_1x1.png */,
 				325E18C61E91E7C000245F66 /* AppDelegate.swift */,
 				325E18C81E91E7C000245F66 /* ViewController.swift */,
 				325E18CA1E91E7C000245F66 /* Main.storyboard */,
@@ -240,6 +243,7 @@
 			files = (
 				325E18D11E91E7C000245F66 /* LaunchScreen.storyboard in Resources */,
 				325E18CE1E91E7C000245F66 /* Assets.xcassets in Resources */,
+				325E18F71E93D27900245F66 /* ICED_BEER_1x1.png in Resources */,
 				325E18F51E93BDC800245F66 /* BOMB_SIREN.wav in Resources */,
 				325E18CC1E91E7C000245F66 /* Main.storyboard in Resources */,
 			);
