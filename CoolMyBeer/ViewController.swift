@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import UserNotifications
 
 class ViewController: UIViewController {
 
@@ -15,14 +16,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var barraEnfriar: UISlider!
     
+    var backgroundUpdateTask: UIBackgroundTaskIdentifier!
+    
     var resumeTapped = false;
     var player: AVAudioPlayer?
     var isRunning = false;
     var enfriar = Float(0);
+    var nowBackground = Date();
     
-    var seconds = 10 //2700 This variable will hold a starting value of seconds. It could be any amount above 0.
+    var seconds         = 2700; //2700 This variable will hold a starting value of seconds.
+    var secondsOriginal = 2700;
+    
     var timer = Timer();
     var isTimerRunning = false; //This will be used to make sure only one timer is created at a time.
+    var isGrantedNotificationAccess:Bool = false
     
     let audioSession = AVAudioSession.sharedInstance()
     
@@ -35,10 +42,24 @@ class ViewController: UIViewController {
         }else{
             barraEnfriar.value = enfriar;
         }
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: Notification.Name.UIApplicationWillResignActive, object: nil)
+        
+        UNUserNotificationCenter.current().requestAuthorization(
+            options: [.alert,.sound,.badge],
+            completionHandler: { (granted,error) in
+                self.isGrantedNotificationAccess = granted
+        }
+        )
     }
+    
+    
+    //UIApplication.sharedApplication().backgroundTimeRemaining
     
     func setSegundos(_ sec:Int){
         seconds = sec;
+        secondsOriginal  = sec;
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,11 +73,42 @@ class ViewController: UIViewController {
         let seconds = Int(time) % 60
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
-
+    
     func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self,
-                                     selector: (#selector(ViewController.updateTimer)),
-                                     userInfo: nil, repeats: true)
+        print("runTimer: INICIANDO \(seconds)");
+
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self,
+                                          selector: (#selector(ViewController.updateTimer)),
+                                          userInfo: nil, repeats: true);
+    }
+    
+    func appMovedToBackground() {
+        print("App moved to background!")
+        DispatchQueue.global(qos: .background).async {
+            print("This is run on the background queue, registering Notifiction!!")
+            self.sendNotification(self.seconds);
+            //self.sendNotification(10);
+            DispatchQueue.main.async {
+                //print("This is run on the main queue, after the previous code in outer block");
+            }
+        }
+    }
+    
+    func compareDates(){
+        let now = Date();
+        let string = (Calendar.current.dateComponents([.second], from: self.nowBackground, to: now).second ?? 0)
+        let differencia = secondsOriginal - seconds + 1;
+        //print("Counted Diff: \(differencia)");
+        //print("Elapsed time: \(string)");
+        if (differencia<string){
+            seconds = secondsOriginal - string + 1;
+            if seconds < 0 {
+                seconds = 0;
+            }else{
+                print("Deleting notification request...")
+                UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["Cool.My.Beer"])
+            }
+        }
     }
     
     func updateTimer() {
@@ -65,8 +117,12 @@ class ViewController: UIViewController {
             timer.invalidate();
             //Send alert to indicate "time's up!"
         } else {
-            seconds -= 1
+            compareDates();
+            if seconds > 1 {
+                seconds -= 1
+            }
             timerLabel.text = timeString(time: TimeInterval(seconds))
+            print("seconds: \(seconds)");
         }
     }
     
@@ -99,7 +155,9 @@ class ViewController: UIViewController {
         if isRunning == false {
             actionEnfriar.setTitle("Detener", for: .normal);
             isRunning = true;
+            seconds = secondsOriginal;
             runTimer();
+            nowBackground = Date();
         }else{
             isRunning = false;
             playSound(play: false);
@@ -113,20 +171,62 @@ class ViewController: UIViewController {
         if (sender.value < 0.5){
             enfriar = 0;
             sender.value = 0;
-            setSegundos(1800);
+            //setSegundos(1800);
+            setSegundos(15);
+            timerLabel.text = timeString(time: TimeInterval(seconds))
         }else
             if (sender.value >= 0.5 && sender.value < 1.5){
                 enfriar = 1;
                 sender.value = 1;
                 setSegundos(2700);
+                timerLabel.text = timeString(time: TimeInterval(seconds))
         }else
                 if (sender.value > 1.5){
                     enfriar = 2;
                     sender.value = 2;
                     setSegundos(3600);
+                    timerLabel.text = timeString(time: TimeInterval(seconds))
         }
-        print(enfriar);
+        //print(enfriar);
         //enfriar = Float(sender.value);
+    }
+    
+    func sendNotification(_ sendSeconds: Int) {
+        if isGrantedNotificationAccess{
+            //add notification code here
+            
+            print("Adding notification request...")
+            
+            //Set the content of the notification
+            let content = UNMutableNotificationContent()
+            content.title = "Vaya a sacar su cerveza!!"
+            //content.subtitle = "De CoolMyBeer"
+            content.body = "Su cerveza está lista favor retirar del congelador!!"
+            content.sound = UNNotificationSound.default()
+            
+            var trigger = UNTimeIntervalNotificationTrigger(
+                timeInterval: TimeInterval(sendSeconds),
+                repeats: false) //true
+            
+            if (seconds > 60){
+                //Set the trigger of the notification -- here a timer.
+                trigger = UNTimeIntervalNotificationTrigger(
+                    timeInterval: TimeInterval(sendSeconds),
+                    repeats: true) //true
+            }
+            
+            //Set the request for the notification from the above
+            let request = UNNotificationRequest(
+                identifier: "Cool.My.Beer",
+                content: content,
+                trigger: trigger
+            )
+            
+            //Add the notification to the currnet notification center
+            UNUserNotificationCenter.current().add(
+                request, withCompletionHandler: nil)
+            
+        }
     }
 }
 
