@@ -154,6 +154,7 @@ class ViewController: UIViewController {
     @IBAction func actionEnviar(_ sender: UIButton) {
         if isRunning == false {
             actionEnfriar.setTitle("Detener", for: .normal);
+            actionEnfriar.setImage(UIImage(named:"Stop.png"), for: .normal)
             isRunning = true;
             seconds = secondsOriginal;
             runTimer();
@@ -163,6 +164,7 @@ class ViewController: UIViewController {
             playSound(play: false);
             timer.invalidate();
             actionEnfriar.setTitle("Enfriar", for: .normal);
+            actionEnfriar.setImage(UIImage(named:"Congelar.png"), for: .normal)
         }
         print("isRunnind: \(isRunning)")
     }
