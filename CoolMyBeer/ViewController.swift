@@ -165,6 +165,8 @@ class ViewController: UIViewController {
             timer.invalidate();
             actionEnfriar.setTitle("Enfriar", for: .normal);
             actionEnfriar.setImage(UIImage(named:"Congelar.png"), for: .normal)
+            print("Deleting notification request...")
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["Cool.My.Beer"])
         }
         print("isRunnind: \(isRunning)")
     }
