@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var barraEnfriar: UISlider!
     
+    
+    
+    
     var resumeTapped = false;
     var player: AVAudioPlayer?
     var isRunning = false;
