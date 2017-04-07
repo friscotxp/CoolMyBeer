@@ -208,7 +208,7 @@ class ViewController: UIViewController {
             content.title = "Vaya a sacar su cerveza!!"
             //content.subtitle = "De CoolMyBeer"
             content.body = "Su cerveza está lista favor retirar del congelador!!"
-            content.sound = UNNotificationSound.default()
+            content.sound = UNNotificationSound(named: "BOMB_SIREN.wav")
             
             var trigger = UNTimeIntervalNotificationTrigger(
                 timeInterval: TimeInterval(sendSeconds),
