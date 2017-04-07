@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3220BE2E1E97408C002DC064 /* Stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3220BE2D1E97408C002DC064 /* Stop.png */; };
 		3220BE301E97419B002DC064 /* Congelar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3220BE2F1E97419B002DC064 /* Congelar.png */; };
+		3220BE321E974F4C002DC064 /* Beer_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3220BE311E974F4C002DC064 /* Beer_background.png */; };
 		325E18C71E91E7C000245F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E18C61E91E7C000245F66 /* AppDelegate.swift */; };
 		325E18C91E91E7C000245F66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E18C81E91E7C000245F66 /* ViewController.swift */; };
 		325E18CC1E91E7C000245F66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325E18CA1E91E7C000245F66 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		3220BE2D1E97408C002DC064 /* Stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stop.png; sourceTree = "<group>"; };
 		3220BE2F1E97419B002DC064 /* Congelar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Congelar.png; sourceTree = "<group>"; };
+		3220BE311E974F4C002DC064 /* Beer_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Beer_background.png; sourceTree = "<group>"; };
 		325E18C31E91E7C000245F66 /* CoolMyBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolMyBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		325E18C61E91E7C000245F66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		325E18C81E91E7C000245F66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				329934F11E96BC9900720E98 /* CoolMyBeer.entitlements */,
+				3220BE311E974F4C002DC064 /* Beer_background.png */,
 				3220BE2F1E97419B002DC064 /* Congelar.png */,
 				3220BE2D1E97408C002DC064 /* Stop.png */,
 				325E18F81E93F1F800245F66 /* BEER.png */,
@@ -266,6 +269,7 @@
 				325E18CE1E91E7C000245F66 /* Assets.xcassets in Resources */,
 				325E18F71E93D27900245F66 /* ICED_BEER_1x1.png in Resources */,
 				325E18F91E93F1F800245F66 /* BEER.png in Resources */,
+				3220BE321E974F4C002DC064 /* Beer_background.png in Resources */,
 				325E18F51E93BDC800245F66 /* BOMB_SIREN.wav in Resources */,
 				325E18CC1E91E7C000245F66 /* Main.storyboard in Resources */,
 			);

@@ -21,6 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Beer_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="GmO-lC-aWO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7n-e3-tXV">
                                 <rect key="frame" x="96" y="220" width="128" height="128"/>
                                 <constraints>
@@ -33,20 +37,20 @@
                                     <action selector="actionEnviar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9XB-eu-sOs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Coloca la cerveza en el congelador!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUo-IW-yKK">
-                                <rect key="frame" x="7" y="137" width="306" height="24"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aSa-KW-32k">
                                 <rect key="frame" x="79" y="396" width="179" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="00:45:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNu-Ct-mcc">
-                                <rect key="frame" x="125" y="200" width="71" height="21"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNu-Ct-mcc">
+                                <rect key="frame" x="92.5" y="142" width="135" height="32"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="00:45:00">
+                                        <attributes>
+                                            <font key="NSFont" size="28" name="Georgia-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="sdH-iF-8sj">
@@ -77,22 +81,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coloca la cerveza en el congelador!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUo-IW-yKK">
+                                <rect key="frame" x="7" y="54" width="306" height="23"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.99322992233612351" green="1" blue="0.29643186207456873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pUo-IW-yKK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="117" id="0P8-hb-jNT"/>
-                            <constraint firstItem="mNu-Ct-mcc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Po-3Y-aJQ"/>
                             <constraint firstItem="2lQ-TZ-s5Z" firstAttribute="top" secondItem="sdH-iF-8sj" secondAttribute="bottom" constant="8" id="623-as-2Og"/>
                             <constraint firstItem="s7L-ZK-ISV" firstAttribute="top" secondItem="sdH-iF-8sj" secondAttribute="bottom" constant="8" id="DVZ-OC-TAG"/>
                             <constraint firstItem="zEz-Hm-waf" firstAttribute="leading" secondItem="s7L-ZK-ISV" secondAttribute="trailing" constant="43" id="GZx-xN-PAv"/>
-                            <constraint firstItem="N7n-e3-tXV" firstAttribute="top" secondItem="mNu-Ct-mcc" secondAttribute="bottom" constant="2" id="HeN-Yj-l5g"/>
+                            <constraint firstItem="mNu-Ct-mcc" firstAttribute="top" secondItem="pUo-IW-yKK" secondAttribute="bottom" constant="65" id="Ulv-R9-OyF"/>
                             <constraint firstItem="s7L-ZK-ISV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bG0-vi-UyY"/>
                             <constraint firstItem="pUo-IW-yKK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hyA-KL-8dK"/>
                             <constraint firstItem="N7n-e3-tXV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kyK-Xu-Yds"/>
-                            <constraint firstItem="mNu-Ct-mcc" firstAttribute="top" secondItem="pUo-IW-yKK" secondAttribute="bottom" constant="39" id="mc0-OV-k80"/>
+                            <constraint firstItem="N7n-e3-tXV" firstAttribute="top" secondItem="mNu-Ct-mcc" secondAttribute="bottom" constant="46.5" id="oap-SJ-xiQ"/>
                             <constraint firstItem="sdH-iF-8sj" firstAttribute="top" secondItem="N7n-e3-tXV" secondAttribute="bottom" constant="48" id="q0U-vL-E6E"/>
                             <constraint firstItem="zEz-Hm-waf" firstAttribute="top" secondItem="sdH-iF-8sj" secondAttribute="bottom" constant="8" id="sht-RA-sqW"/>
                             <constraint firstItem="N7n-e3-tXV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tIw-BD-fms"/>
+                            <constraint firstItem="mNu-Ct-mcc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ti3-A5-LyF"/>
                             <constraint firstItem="sdH-iF-8sj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vkm-8i-Tzu"/>
                             <constraint firstItem="s7L-ZK-ISV" firstAttribute="leading" secondItem="2lQ-TZ-s5Z" secondAttribute="trailing" constant="23" id="yiL-TZ-KWA"/>
                         </constraints>
@@ -106,10 +114,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="138.38028169014083"/>
+            <point key="canvasLocation" x="133.33333333333334" y="137.77173913043478"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Beer_background.png" width="1500" height="1894"/>
         <image name="Congelar.png" width="256" height="256"/>
     </resources>
 </document>
