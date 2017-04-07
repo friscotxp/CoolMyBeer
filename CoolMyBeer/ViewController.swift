@@ -159,6 +159,7 @@ class ViewController: UIViewController {
             seconds = secondsOriginal;
             runTimer();
             nowBackground = Date();
+            tituloPrincipal.text = "Ahora espera a que esté bien helada!";
         }else{
             isRunning = false;
             playSound(play: false);
@@ -166,7 +167,8 @@ class ViewController: UIViewController {
             actionEnfriar.setTitle("Enfriar", for: .normal);
             actionEnfriar.setImage(UIImage(named:"Congelar.png"), for: .normal)
             print("Deleting notification request...")
-            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["Cool.My.Beer"])
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["Cool.My.Beer"]);
+            tituloPrincipal.text = "Coloca la cerveza en el congelador!";
         }
         print("isRunnind: \(isRunning)")
     }
