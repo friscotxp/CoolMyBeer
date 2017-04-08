@@ -85,8 +85,10 @@ class ViewController: UIViewController {
     func appMovedToBackground() {
         print("App moved to background!")
         DispatchQueue.global(qos: .background).async {
-            print("This is run on the background queue, registering Notifiction!!")
-            self.sendNotification(self.seconds);
+            if self.timer.isValid {
+                print("This is run on the background queue, registering Notifiction!!")
+                self.sendNotification(self.seconds);
+            }
             //self.sendNotification(10);
             DispatchQueue.main.async {
                 //print("This is run on the main queue, after the previous code in outer block");
