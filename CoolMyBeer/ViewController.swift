@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        tituloPrincipal.text = "Coloca la cerveza en el congelador!";
+        //tituloPrincipal.text = "Coloca la cerveza en el congelador!";
         if (enfriar == 0.0){
             enfriar = Float(1);
         }else{
@@ -114,6 +114,7 @@ class ViewController: UIViewController {
     }
     
     func updateTimer() {
+        print("updateTimer: Tick");
         if seconds < 1 {
             if timer.isValid { playSound(play: true); }
             timer.invalidate();
@@ -161,7 +162,7 @@ class ViewController: UIViewController {
             seconds = secondsOriginal;
             runTimer();
             nowBackground = Date();
-            tituloPrincipal.text = "Ahora espera a que esté bien helada!";
+            //tituloPrincipal.text = "Ahora espera a que esté bien helada!";
         }else{
             isRunning = false;
             playSound(play: false);
@@ -170,7 +171,7 @@ class ViewController: UIViewController {
             actionEnfriar.setImage(UIImage(named:"Congelar.png"), for: .normal)
             print("Deleting notification request...")
             UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["Cool.My.Beer"]);
-            tituloPrincipal.text = "Coloca la cerveza en el congelador!";
+            //tituloPrincipal.text = "Coloca la cerveza en el congelador!";
         }
         print("isRunnind: \(isRunning)")
     }
@@ -220,7 +221,7 @@ class ViewController: UIViewController {
                 //Set the trigger of the notification -- here a timer.
                 trigger = UNTimeIntervalNotificationTrigger(
                     timeInterval: TimeInterval(sendSeconds),
-                    repeats: true) //true
+                    repeats: false) //true
             }
             
             //Set the request for the notification from the above

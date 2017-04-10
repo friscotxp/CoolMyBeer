@@ -21,15 +21,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Beer_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="GmO-lC-aWO">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="568"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_CMB.png" translatesAutoresizingMaskIntoConstraints="NO" id="GmO-lC-aWO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7n-e3-tXV">
-                                <rect key="frame" x="96" y="220" width="128" height="128"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aSa-KW-32k">
+                                <rect key="frame" x="79" y="396" width="179" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:45:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNu-Ct-mcc">
+                                <rect key="frame" x="146.5" y="28" width="147" height="39.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <slider opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="sdH-iF-8sj">
+                                <rect key="frame" x="68.5" y="495" width="183" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="Eja-aK-QLp"/>
-                                    <constraint firstAttribute="width" constant="128" id="lZn-dp-Iwa"/>
+                                    <constraint firstAttribute="height" constant="30" id="Nlv-wL-106"/>
+                                    <constraint firstAttribute="width" constant="179" id="qMk-KJ-hBQ"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="barraEnfriar:" destination="BYZ-38-t0r" eventType="valueChanged" id="SvV-5Q-k9T"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cool" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEz-Hm-waf">
+                                <rect key="frame" x="228" y="535.5" width="38.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7L-ZK-ISV">
+                                <rect key="frame" x="128.5" y="535.5" width="64.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fría" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lQ-TZ-s5Z">
+                                <rect key="frame" x="54" y="535.5" width="39.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7n-e3-tXV">
+                                <rect key="frame" x="185" y="75.5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Eja-aK-QLp"/>
+                                    <constraint firstAttribute="width" constant="70" id="lZn-dp-Iwa"/>
                                 </constraints>
                                 <color key="tintColor" red="1" green="0.039765733839999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Enfriar" image="Congelar.png"/>
@@ -37,93 +81,26 @@
                                     <action selector="actionEnviar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9XB-eu-sOs"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aSa-KW-32k">
-                                <rect key="frame" x="79" y="396" width="179" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:45:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNu-Ct-mcc">
-                                <rect key="frame" x="92" y="140" width="136.5" height="34"/>
-                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="1" green="0.0" blue="0.12105407899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="2" height="2"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="sdH-iF-8sj">
-                                <rect key="frame" x="68.5" y="396" width="183" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Nlv-wL-106"/>
-                                    <constraint firstAttribute="width" constant="179" id="qMk-KJ-hBQ"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="barraEnfriar:" destination="BYZ-38-t0r" eventType="valueChanged" id="SvV-5Q-k9T"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Más" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEz-Hm-waf">
-                                <rect key="frame" x="219" y="434" width="33" height="20"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="1" green="0.0" blue="0.12105407899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fría" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7L-ZK-ISV">
-                                <rect key="frame" x="144" y="434" width="32" height="20"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="1" green="0.0" blue="0.12105407899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lQ-TZ-s5Z">
-                                <rect key="frame" x="69" y="434" width="52" height="20"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Menos">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Georgia"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="1" green="0.0" blue="0.12105407899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUo-IW-yKK">
-                                <rect key="frame" x="6.5" y="51" width="307" height="24"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Coloca la cerveza en el congelador!">
-                                        <attributes>
-                                            <font key="NSFont" size="20" name="Georgia"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="1" green="0.0" blue="0.12105407899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="2lQ-TZ-s5Z" firstAttribute="top" secondItem="sdH-iF-8sj" secondAttribute="bottom" constant="8" id="623-as-2Og"/>
-                            <constraint firstItem="s7L-ZK-ISV" firstAttribute="top" secondItem="sdH-iF-8sj" secondAttribute="bottom" constant="8" id="DVZ-OC-TAG"/>
-                            <constraint firstItem="zEz-Hm-waf" firstAttribute="leading" secondItem="s7L-ZK-ISV" secondAttribute="trailing" constant="43" id="GZx-xN-PAv"/>
-                            <constraint firstItem="mNu-Ct-mcc" firstAttribute="top" secondItem="pUo-IW-yKK" secondAttribute="bottom" constant="65" id="Ulv-R9-OyF"/>
-                            <constraint firstItem="s7L-ZK-ISV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bG0-vi-UyY"/>
-                            <constraint firstItem="pUo-IW-yKK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hyA-KL-8dK"/>
-                            <constraint firstItem="N7n-e3-tXV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kyK-Xu-Yds"/>
-                            <constraint firstItem="N7n-e3-tXV" firstAttribute="top" secondItem="mNu-Ct-mcc" secondAttribute="bottom" constant="46.5" id="oap-SJ-xiQ"/>
-                            <constraint firstItem="sdH-iF-8sj" firstAttribute="top" secondItem="N7n-e3-tXV" secondAttribute="bottom" constant="48" id="q0U-vL-E6E"/>
-                            <constraint firstItem="zEz-Hm-waf" firstAttribute="top" secondItem="sdH-iF-8sj" secondAttribute="bottom" constant="8" id="sht-RA-sqW"/>
-                            <constraint firstItem="N7n-e3-tXV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tIw-BD-fms"/>
-                            <constraint firstItem="mNu-Ct-mcc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ti3-A5-LyF"/>
-                            <constraint firstItem="sdH-iF-8sj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vkm-8i-Tzu"/>
-                            <constraint firstItem="s7L-ZK-ISV" firstAttribute="leading" secondItem="2lQ-TZ-s5Z" secondAttribute="trailing" constant="23" id="yiL-TZ-KWA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zEz-Hm-waf" secondAttribute="bottom" constant="10" id="5lH-Dy-lML"/>
+                            <constraint firstItem="s7L-ZK-ISV" firstAttribute="leading" secondItem="2lQ-TZ-s5Z" secondAttribute="trailing" constant="35" id="Bb6-LB-FkM"/>
+                            <constraint firstItem="N7n-e3-tXV" firstAttribute="top" secondItem="mNu-Ct-mcc" secondAttribute="bottom" constant="8" id="Eew-bp-kwS"/>
+                            <constraint firstItem="mNu-Ct-mcc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="60" id="FCC-c2-yKB"/>
+                            <constraint firstItem="mNu-Ct-mcc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="GOk-PT-5G8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2lQ-TZ-s5Z" secondAttribute="bottom" constant="10" id="Igc-EB-2Zo"/>
+                            <constraint firstItem="N7n-e3-tXV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="60" id="JEI-rg-Sbl"/>
+                            <constraint firstItem="zEz-Hm-waf" firstAttribute="leading" secondItem="s7L-ZK-ISV" secondAttribute="trailing" constant="35" id="S6F-p8-POw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s7L-ZK-ISV" secondAttribute="bottom" constant="10" id="aV5-dD-1KM"/>
+                            <constraint firstItem="s7L-ZK-ISV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dd6-5X-LEj"/>
+                            <constraint firstItem="sdH-iF-8sj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i5k-gl-EVo"/>
+                            <constraint firstItem="sdH-iF-8sj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="la2-xg-Bfc"/>
+                            <constraint firstItem="s7L-ZK-ISV" firstAttribute="top" secondItem="sdH-iF-8sj" secondAttribute="bottom" constant="10.5" id="pMr-zJ-Jna"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="actionEnfriar" destination="N7n-e3-tXV" id="q4m-Rn-ft4"/>
-                        <outlet property="barraEnfriar" destination="vkm-8i-Tzu" id="kAr-1C-JFk"/>
                         <outlet property="timerLabel" destination="mNu-Ct-mcc" id="Uff-ag-vhW"/>
-                        <outlet property="tituloPrincipal" destination="pUo-IW-yKK" id="yyo-eK-9zw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -132,7 +109,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Beer_background.png" width="1500" height="1894"/>
-        <image name="Congelar.png" width="256" height="256"/>
+        <image name="Congelar.png" width="500" height="500"/>
+        <image name="fondo_CMB.png" width="1242" height="2208"/>
     </resources>
 </document>

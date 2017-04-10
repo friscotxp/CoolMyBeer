@@ -3,49 +3,49 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "BEER_40x40.png",
+      "filename" : "CMB-20x20@2.png",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "BEER_60x60 2.png",
+      "filename" : "CMB-20x20@3.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "BEER_58x58.png",
+      "filename" : "CMB-29x29@2.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "BEER_87x87.png",
+      "filename" : "CMB-29x29@3.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "BEER_80x80.png",
+      "filename" : "CMB-40x40@2.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "BEER_120x120.png",
+      "filename" : "CMB-40x40@3.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "BEER_120x121.png",
+      "filename" : "CMB-60x60@2.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "BEER_180x180.png",
+      "filename" : "CMB-60x60@3.png",
       "scale" : "3x"
     }
   ],
